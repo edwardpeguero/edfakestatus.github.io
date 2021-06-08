@@ -12,7 +12,7 @@
 <div id="wrapper">
   <header>
     <h1>Final Exam worth all the marbles</h1>
-    <p>Dynamic Web Design Final Project - Simple JavaScript Quiz</p>
+    <p>Ed's Funtime Quiz for a grade!</p>
   </header>
   <section>
     <!-- <button onclick="yourName()">What is your name?</button> -->
@@ -76,11 +76,11 @@ function yourName() {
   var hour = today.getHours();
 
   if (hour < 12) {
-    document.getElementById("demo").innerHTML = "Good Morning! " + name;
+    document.getElementById("demo").innerHTML = "It's the morning too early! " + name;
   } else if (hour < 18) {
-    document.getElementById("demo").innerHTML = "Good Afternoon! " + name;
+    document.getElementById("demo").innerHTML = "Slept in?! " + name;
   } else {
-    document.getElementById("demo").innerHTML = "Good Evening! " + name;
+    document.getElementById("demo").innerHTML = "It's too late in the night! " + name;
   }
 }
 
