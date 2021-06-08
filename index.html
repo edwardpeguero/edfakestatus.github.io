@@ -1,22 +1,175 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+<html>
+
 <head>
-  <title>The Rock (1996)</title>
-     <!-- the bold title on Facebook -->
-  <meta property="og:title" content="The Rock"/>
-  <meta property="og:type" content="movie"/>
-     <!-- the url under the title on Facebook -->
-  <meta property="og:url" content="http://www.imdb.com/title/tt0117500/"/>
-     <!-- the image to the left of text on Facebook -->
-  <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
-  <meta property="og:site_name" content="IMDb"/>
-  <meta property="fb:admins" content="USER_ID"/>
-     <!-- the description under description and title on Facebook -->
-  <meta property="og:description"
-      content="A group of U.S. Marines, under command of
-               a renegade general, take over Alcatraz and
-               threaten San Francisco Bay with biological
-               weapons."/>
-  ...
+
+	<style>
+		h2{ margin:10%;}
+
+	#main{ 
+		margin:10% 10% 0 10%;
+
+
+	}
+
+	p{
+		margin:2% 10% 0 10%;
+	}
+
+	#show{color:red;
+		
+	}	
+
+	#postButton{ 
+		margin-left:75%;
+		background-color:lightblue;
+		font-size: 15px;
+	}
+
+	#Div1{
+
+		color:red;
+	}
+
+
+
+	#area{ /*position:relative;
+		top :15%;
+		left:10%;
+		right:10%;
+		padding:20px;*/
+	}
+
+		/*.result{
+
+			color:red;
+		}*/
+	
+
+
+
+	</style>
+
 </head>
+<body>
+
+	<h2> Nobody likes your <span style = "color:blue">facebook</span> status? Worry not! Self service is always appreciated. Now you can like your own status for unlimited time! (Thank me later ;)</h2>
+
+	<div id = "main">
+
+	<input id ="input" placeholder = "What's in your mind ;)" style = "width:80%; height:10%;  font-size :15px "></input><br>
+
+<button onClick = "post()" id = "postButton"> post</button> <br><br>
+
+</div>
+
+
+<script>
+
+function post(){
+	var userInput = document.getElementById('input').value;
+
+	if (userInput !== null && userInput !== '') {
+	var element = document.createElement('p');
+	element.style.display = "inline-block";
+	element.style.color = "blue";
+
+	element.style.borderBottom="1px solid gray";
+	element.style.fontSize = "20px";
+
+	
+	
+
+	var text = document.createTextNode( ' " ' +  userInput  + ' " ');
+
+	element.appendChild(text );
+
+	document.body.appendChild(element);
+
+	var like = document.createElement('p');
+	like.setAttribute("id", "Div1");
+
+	var likeText = document.createTextNode('like');
+	like.appendChild(likeText);
+	document.body.appendChild(like);
+	like.addEventListener("click", likeCounter);
+	// like.style.color = "red";
+	like.style.display = "inline-block";
+
+}
+
+else { alert('you have to write a status!');}
+
+
+}
+
+</script>
+
+
+
+
+<div id = "area">
+	<!-- <img src = "images/like.jpg" onClick = "likeCounter()"></p>
+	<br>
+ -->	<p id = "show" ></p>
+
+</div>
+
+
+	<script>
+	var x = -1;
+
+	
+
+
+	function likeCounter(){
+		x = x+1;
+
+
+		document.getElementById('show').innerHTML = x+1 + " people like your comment!";	
+
+	}
+
+	// following one is testing purposes
+
+	// function likeCounter(){
+		
+	// 	  alert("Hello! I am an alert box!");
+		
+
+	// }
+
+
+	// function likeCounter(){
+
+
+	// 	 x = x+1;
+
+
+	// var peopleLike = document.createElement('p');
+
+	// var peopleLikeText = document.createTextNode( x+1 + " people like your bullshit!");
+	// peopleLikeText = document.createTextNode( x+1 + " people like your bullshit!");
+	// peopleLike.appendChild(peopleLikeText);
+	// document.body.appendChild(peopleLike);
+	// }
+
+	// function likeCounter(){
+	// 	x = x+1;
+		
+	// var peopleLike = document.createElement('p');
+ // 	var peopleLikeText = document.createTextNode( "hi htere");
+ 	
+ // 	// peopleLike.setAttribute("id", "show");
+ // 	peopleLikeText.id = "show";
+ // 	document.getElementById('show').innerHTML = " hi there";	
+
+
+
+
+	
+
+	</script>
+
+</body>
+
+</html>
